@@ -35,13 +35,13 @@ app.post('/api/notes', (req, res) => {
 // Post request to delete notes
 app.delete(`/api/notes/:id`, (req, res)=> {
     const {id} = req.body;
+    let db = JSON.parse(fs.readFileSync('./db/db.json','utf8'))
     let noteToDelete= id;
     for (let i = 0; i < db.length; i++){
         if(db[i].id === noteToDelete){
             noteToDelete = i
         }
     }
-    let db = JSON.parse(fs.readFileSync('./db/db.json','utf8'))
     db.splice(noteToDelete,1)
     fs.writeFileSync('./db/db.json', JSON.stringify(db))
 });
