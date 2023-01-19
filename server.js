@@ -33,7 +33,7 @@ app.post('/api/notes', (req, res) => {
 });
 
 // Post request to delete notes
-app.post(`/api/notes/:id`, (req, res)=> {
+app.delete(`/api/notes/:id`, (req, res)=> {
     const {id} = req.body;
     let noteToDelete= id;
     for (let i = 0; i < db.length; i++){
