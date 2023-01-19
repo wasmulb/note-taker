@@ -32,6 +32,20 @@ app.post('/api/notes', (req, res) => {
     res.json(db)
 });
 
+// Post request to delete notes
+app.post(`/api/notes/:id`, (req, res)=> {
+    const {id} = req.body;
+    let noteToDelete= id;
+    for (let i = 0; i < db.length; i++){
+        if(db[i].id === noteToDelete){
+            noteToDelete = i
+        }
+    }
+    let db = JSON.parse(fs.readFileSync('./db/db.json','utf8'))
+    db.splice(noteToDelete,1)
+    fs.writeFileSync('./db/db.json', JSON.stringify(db))
+});
+
 // Get request to retrieve notes from db to display them
 app.get('/api/notes', (req, res) => {
     let db = JSON.parse(fs.readFileSync('db/db.json','utf8'))
