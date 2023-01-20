@@ -21,7 +21,7 @@ N/A
 To use my note-taker website, follow the link provided above. The landing page will appear.
 ![site-screenshot](./images/note-taker-sc-2.png)
 
-All previously saved notes will be on the left side of the page. To add a new note, click "+" in the top-right side of the page. Enter a title in the title field; and text in the text field. Then click the save icon to save. If you want to edit a past note, click the note you wish to edit on the left side. The note then becomes editable.
+All previously saved notes will be on the left side of the page. To add a new note, click "+" in the top-right side of the page. Enter a title in the title field; and text in the text field. Then click the save icon to save. If you want to edit a past note, click the note you wish to edit on the left side. The note then becomes viewable.
 ![site-screenshot](./images/note-taker-sc-1.png) 
 
 ## License
